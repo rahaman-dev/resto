@@ -1,0 +1,439 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* common style */
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  background-color: #0e1317;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.light-font {
+  font-family: "Roboto Slab", serif;
+}
+
+.font-Nunito {
+  font-family: "Nunito Sans";
+}
+
+.font-Themify {
+  font-family: "themify";
+}
+
+.tag {
+  @apply px-5 py-[6px] text-[15px] text-muted hover:text-white bg-[#2c3238] hover:bg-btnBg duration-300;
+}
+
+/* ----------------------------navbar start---------------------------- */
+.fixed-navbar {
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.menu-link {
+  position: relative;
+  font-size: 16px;
+  line-height: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.menu-link::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  margin: 0 12px 0 17px;
+  transform: rotate(45deg);
+  background: #c49f66;
+  display: inline-block;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.menu-link:hover {
+  color: #c49f66;
+}
+
+.menu-link:hover::after {
+  transform: rotate(135deg);
+}
+
+/* ----------------------------navbar--end-------------------------- */
+
+/* ----------------------------Banner for all pages--start-------------------------- */
+.reservationBackground {
+  height: 100vh;
+  width: 100%;
+  background-image: url("/cover.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 10px solid #ca9c5e;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3;
+}
+
+.reservationBannerTwo {
+  background-image: url("/archive-img-4.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.356), rgba(0, 0, 0, 0.377));
+  background-blend-mode: overlay;
+  height: 75vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.reservationBannerThree {
+  background-image: url("/table.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.356), rgba(0, 0, 0, 0.377));
+  background-blend-mode: overlay;
+  height: 75vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.aboutBackground {
+  background-image: url("/about.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.356), rgba(0, 0, 0, 0.377));
+  background-blend-mode: overlay;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  border: 10px solid #ca9c5e;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3;
+}
+
+.contactBackground {
+  background-image: url("/table.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.356), rgba(0, 0, 0, 0.377));
+  background-blend-mode: overlay;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  border: 10px solid #ca9c5e;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3;
+}
+
+.ourMenuBackground {
+  background-image: url("/ourmenu.jpeg");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  border: 10px solid #ca9c5e;
+  background-attachment: fixed;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3;
+}
+
+.shopBackground {
+  background-image: url("/shop.jpeg"),
+    linear-gradient(rgba(0, 0, 0, 0.356), rgba(0, 0, 0, 0.377));
+  background-blend-mode: overlay;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  border: 10px solid #ca9c5e;
+  background-attachment: fixed;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3;
+}
+
+/* ----------------------------Banner for all pages--end-------------------------- */
+
+/* ----------------------------Footer--Style--start-------------------------- */
+.showcase img:hover {
+  cursor: pointer;
+  scale: 1.06;
+  transition: scale 0.5s ease-in-out;
+}
+
+.footer-link a:hover {
+  color: #ca9c5e;
+  transition: color 0.3s ease;
+}
+
+*::selection {
+  background-color: #c49f66;
+  color: white;
+}
+
+/* Quote styles*/
+.quote {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+}
+.quote::before {
+  content: "\e67f";
+  font-family: "themify";
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  font-size: 27px;
+  top: 0;
+  color: #fff;
+  background: #c59d5f;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-author {
+  font-size: 16px;
+  color: #c59d5f;
+  padding-left: 29px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.quote-author::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #c59d5f;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+/* Quote styles  */
+
+.colorSpicy {
+  font-family: Themify;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 200;
+  padding-left: 60px;
+  vertical-align: middle;
+  position: relative;
+  border-radius: 0;
+  transition: all 0.3s;
+}
+
+.colorSpicy::before {
+  content: "\e629";
+  font-size: 16px;
+  height: 46px;
+  width: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c59d5f;
+  position: absolute;
+  left: 0;
+  top: 12px;
+  transition: 0.3s ease;
+}
+
+.colorSpicyContainer::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 45px;
+  background: #ababab46;
+  right: 0;
+  top: 10px;
+}
+
+.colorSpicyContainer:hover .colorSpicy::before {
+  background-color: #ababab46;
+  color: white;
+}
+
+.footer {
+  background-image: url("/footer-bg.png"), url("/footer-bg-2.png");
+  background-size: auto 400px, cover;
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
+}
+
+.footer-top {
+  background-image: url("/footer-bg-3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer-menu {
+  position: relative;
+  color: #ababab;
+  padding-left: 20px;
+  transition: 0.4s ease;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.footer-menu:hover {
+  color: white;
+}
+
+.footer-menu::before {
+  content: "";
+  vertical-align: middle;
+  font-size: 12px;
+  width: 7px;
+  height: 7px;
+  margin-right: 10px;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 0;
+  transition: all 250ms ease-in-out 0s;
+  background: #c49f6680;
+  display: inline-block;
+  top: 50%;
+}
+.footer-menu:hover::before {
+  transform: rotate(135deg);
+  background: #c59d5f;
+}
+
+/* ----------------------------Footer--Style--start-------------------------- */
+
+/* ---------------------------- Blog-Page-Start---------------------------- */
+.bottom,
+.textareaBottom {
+  position: relative;
+}
+
+.bottom::before {
+  content: "";
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  width: 0;
+  height: 1px;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, #c49f66, rgb(58 123 213 / 0%));
+  border-image-slice: 1;
+  z-index: 10;
+}
+
+.textareaBottom::before {
+  content: "";
+  bottom: 6px;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  width: 0;
+  height: 1px;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, #c49f66, rgb(58 123 213 / 0%));
+  border-image-slice: 1;
+  z-index: 10;
+}
+
+.input:focus + .bottom::before {
+  width: 100%;
+}
+
+textarea:focus + .textareaBottom::before {
+  width: 100%;
+}
+
+.bg-lightBg {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 25 32 / var(--tw-bg-opacity));
+}
+
+.bg-darkBg {
+  --tw-bg-opacity: 1;
+  background-color: rgb(8 12 14 / var(--tw-bg-opacity));
+}
+
+.text-muted {
+  --tw-text-opacity: 1;
+  color: rgb(171 171 171 / var(--tw-text-opacity));
+}
+
+.hover\:bg-btnBg:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(197 157 95 / var(--tw-bg-opacity));
+}
+
+/* ---------------------------- Blog-Page-End---------------------------- */
+
+/* ----------------------------About--Style--start-------------------------- */
+.InviteToRestaurant {
+  background-image: url("/InviteToRestaurant.jpeg"),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.HTFG,
+.HTF,
+.GFA,
+.LUS {
+  color: #325e68;
+}
+
+.HTFG:hover,
+.HTF:hover,
+.GFA:hover,
+.LUS:hover {
+  transition: 0.2s;
+  color: #fff;
+}
+
+.InviteToRestaurant-icon4:hover ~ .LUS {
+  transition: 0.3s;
+  color: #fff;
+}
+
+.InviteToRestaurant-icon3:hover ~ .GFA {
+  transition: 0.3s;
+  color: #fff;
+}
+.InviteToRestaurant-icon2:hover ~ .HTF {
+  transition: 0.3s;
+  color: #fff;
+}
+.InviteToRestaurant-icon1:hover ~ .HTFG {
+  transition: 0.3s;
+  color: #fff;
+}
+/* ----------------------------About--Style--end-------------------------- */
