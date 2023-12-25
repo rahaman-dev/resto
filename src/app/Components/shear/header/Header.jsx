@@ -119,10 +119,10 @@ export default function Header() {
           <Link href="https://www.linkedin.com/in/dev-rahaman" target="_blank">
             <FaLinkedinIn size={24}></FaLinkedinIn>
           </Link>
-          <Link href="https://github.com/dev-rahaman">
+          <Link href="https://github.com/dev-rahaman" target="_blank">
             <FaGithub size={24}></FaGithub>
           </Link>
-          <Link href="https://www.facebook.com/rahamandev">
+          <Link href="https://www.facebook.com/rahamandev" target="_blank">
             <FaFacebook size={24}></FaFacebook>
           </Link>
           <p className="md:hidden block cursor-pointer" onClick={handleMenu}>
