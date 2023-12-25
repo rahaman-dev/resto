@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { FaFacebook } from "react-icons/fa6";
+import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { RxCross1 } from "react-icons/rx";
 import { FaInstagram, FaTripadvisor } from "react-icons/fa";
@@ -21,16 +21,16 @@ const navbar = [
     text: "Our Menu",
   },
   {
-    link: "/blog",
-    text: "Blogs",
-  },
-  {
     link: "/contact",
     text: "Contact",
   },
   {
     link: "/shop",
     text: "Shop",
+  },
+  {
+    link: "/blog",
+    text: "Blogs",
   },
 ];
 
@@ -69,14 +69,17 @@ export default function Header() {
     >
       <div className=" px-8 md:px-0  md:gap-0 flex justify-between items-center w-full md:max-w-6xl mx-auto">
         <div>
-          <Image
-            src={"/logo.png"}
-            alt="logo"
-            width={"150"}
-            height={"150"}
-            className="md:h-[70] md:w-[150px] h-[60px] w-[130px]"
-          />
+          <Link href={"/"}>
+            <Image
+              src={"/logo.png"}
+              alt="logo"
+              width={"150"}
+              height={"150"}
+              className="md:h-[70] md:w-[150px] h-[60px] w-[130px]"
+            />
+          </Link>
         </div>
+
         <div className="hidden  md:flex justify-center items-center  gap-8 font-semibold text-base">
           {navbar.map((item) => (
             <>
@@ -113,14 +116,14 @@ export default function Header() {
           </div>
         </div>
         <div className="flex justify-center items-center gap-5 ">
-          <Link href="">
+          <Link href="https://www.linkedin.com/in/dev-rahaman" target="_blank">
+            <FaLinkedinIn size={24}></FaLinkedinIn>
+          </Link>
+          <Link href="https://github.com/dev-rahaman">
+            <FaGithub size={24}></FaGithub>
+          </Link>
+          <Link href="https://www.facebook.com/rahamandev">
             <FaFacebook size={24}></FaFacebook>
-          </Link>
-          <Link href="">
-            <FaInstagram size={24}></FaInstagram>
-          </Link>
-          <Link href="">
-            <FaTripadvisor size={24}></FaTripadvisor>
           </Link>
           <p className="md:hidden block cursor-pointer" onClick={handleMenu}>
             <HiMenuAlt4 size={24}></HiMenuAlt4>
