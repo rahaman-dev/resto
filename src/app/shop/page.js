@@ -1,5 +1,6 @@
 import React from "react";
 import CoverBackground from "../Components/SmallComponents/CoverBackground";
+import RestaurantBookingCard from "../Components/SmallComponents/RestaurantBookingCard";
 
 export default function Shop() {
   return (
@@ -14,6 +15,7 @@ export default function Shop() {
         leftCornerImage={"/contact-left-covert.png"}
         rightCornerImage={"/contact-right-cover.png"}
       />
+      <RestaurantBookingCard />
     </div>
   );
 }
